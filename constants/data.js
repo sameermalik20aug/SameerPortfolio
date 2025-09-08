@@ -1,7 +1,7 @@
 const userData = {
   githubUsername: "sameermalik20aug",
   name: "Sameer Malik",
-  designation: "Full-Stack Developer",
+  designation: "Cloud & AI Applications Engineer",
   avatarUrl: "/avatar.png",
   email: "sameermalik20aug@gmail.com",
   phone: "+61 478740288",
@@ -89,6 +89,13 @@ const userData = {
       desc: "Developed pothole detection system with OpenCV and computer vision, detects potholes on roads and informs the driver.",
     },
     {
+      title: "Post Graduation",
+      company: "University of Sydney.",
+      year: "2025",
+      companyLink: "https://www.sydney.edu.au/",
+      desc: "Major in Computer Science and Engineering with a CGPA of 7.6. Nobody asks this but it's okay.",
+    },
+    {
       title: "Graduation",
       company: "Amity University, Noida.",
       year: "2020",
@@ -106,7 +113,7 @@ const userData = {
   resumeUrl:
     "https://drive.google.com/file/d/1xmE3BOmgM7TAOOgVp36xQIQvYDntDYoo/view?usp=sharing",
   socialLinks: {
-    instagram: "https://instagram.com/maninthere",
+    instagram: "https://www.instagram.com/srox69/",
     twitter: "https://x.com/SamyM98",
     linkedin: "https://www.linkedin.com/in/sameer-malik-20aug/",
     github: "https://github.com/sameermalik20aug",
