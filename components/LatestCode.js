@@ -1,10 +1,8 @@
-import React, { useEffect, useState } from "react";
-import Link from "next/link";
-import getLatestRepos from "@lib/getLatestRepos";
+import React from "react";
 import userData from "@constants/data";
 
-export default function LatestCode({ repositories }) {
-  const [repos, setRepos] = useState(repositories);
+export default function LatestCode() {
+  const repos = userData.repos;
 
   return (
     <section className="bg-[#F1F1F1] -mt-40 dark:bg-gray-900 pb-40">
@@ -41,8 +39,8 @@ export default function LatestCode({ repositories }) {
         {/* Single github Repo */}
 
         {repos &&
-          repos.map((latestRepo, idx) => (
-            <GithubRepoCard latestRepo={latestRepo} key="idx" />
+          repos.map((latestRepo) => (
+            <GithubRepoCard latestRepo={latestRepo} key={latestRepo.name} />
           ))}
       </div>
     </section>
@@ -59,7 +57,7 @@ const GithubRepoCard = ({ latestRepo }) => {
         {latestRepo.description}
       </p>
       <a
-        href={latestRepo.clone_url}
+        href={latestRepo.html_url}
         className="font-semibold group flex flex-row space-x-2 w-full items-center"
       >
         <p>View Repository </p>
