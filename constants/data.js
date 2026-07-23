@@ -117,9 +117,42 @@ const userData = {
     twitter: "https://x.com/SamyM98",
     linkedin: "https://www.linkedin.com/in/sameer-malik-20aug/",
     github: "https://github.com/sameermalik20aug",
-    facebook: "https://facebook.com/",
-    peerlist: "https://peerlist.io/manuarora",
   },
+  // Repositories shown in the "Latest Code" section. Kept as a static list so
+  // the site has no runtime dependency on the GitHub API (which rate-limits).
+  // Edit this list to control what appears.
+  repos: [
+    {
+      name: "vid-sum",
+      description: "Video summarization application.",
+      html_url: "https://github.com/sameermalik20aug/vid-sum",
+    },
+    {
+      name: "bastion-scan",
+      description: "Host and configuration scanning tool.",
+      html_url: "https://github.com/sameermalik20aug/bastion-scan",
+    },
+    {
+      name: "One-Shot-TS",
+      description: "A one-shot tour through the basics of TypeScript.",
+      html_url: "https://github.com/sameermalik20aug/One-Shot-TS",
+    },
+    {
+      name: "Angular-Tut-Final-Project",
+      description: "Final project built while working through an Angular course.",
+      html_url: "https://github.com/sameermalik20aug/Angular-Tut-Final-Project",
+    },
+    {
+      name: "PokedexS",
+      description: "A Pokédex web app.",
+      html_url: "https://github.com/sameermalik20aug/PokedexS",
+    },
+    {
+      name: "ResonateContacts",
+      description: "Contact management experiment.",
+      html_url: "https://github.com/sameermalik20aug/ResonateContacts",
+    },
+  ],
 };
 
 export default userData;
