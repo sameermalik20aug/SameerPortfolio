@@ -8,7 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "next": "^15.5.2",
+    "next": "15.5.9",
     "next-themes": "latest",
     "react": "18.2.0",
     "react-dom": "18.2.0",
