@@ -90,10 +90,10 @@ function WorkItem({ item, index, titleAs }) {
   );
 }
 
-export default function SelectedWork({ as = "h2", index = "01" }) {
+export default function SelectedWork({ as = "h2" }) {
   const titleAs = as === "h1" ? "h2" : "h3";
   return (
-    <Section id="work" title="Selected Work" as={as} index={index}>
+    <Section id="work" title="Selected Work" as={as}>
       <div className="space-y-section-sm">
         {userData.work.map((item, i) => (
           <WorkItem key={item.title} item={item} index={i} titleAs={titleAs} />

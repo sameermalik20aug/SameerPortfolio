@@ -5,7 +5,7 @@ import SelectedWork from "../components/SelectedWork";
 export default function Projects() {
   return (
     <Layout title="Selected Work — Sameer Malik">
-      <SelectedWork as="h1" index={null} />
+      <SelectedWork as="h1" />
     </Layout>
   );
 }

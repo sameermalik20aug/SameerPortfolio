@@ -12,9 +12,9 @@ const PARAGRAPHS = [
 const linkClass =
   "underline decoration-transparent underline-offset-4 transition-colors hover:text-accent-strong hover:decoration-accent-strong focus-visible:text-accent-strong";
 
-export default function AboutMe({ as = "h2", index = "04" }) {
+export default function AboutMe({ as = "h2" }) {
   return (
-    <Section id="about" title="About" as={as} index={index}>
+    <Section id="about" title="About" as={as}>
       <div className="max-w-measure space-y-5 text-prose text-muted">
         {PARAGRAPHS.map((p, i) => (
           <p key={i} className={i === 0 ? "text-ink" : undefined}>

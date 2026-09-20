@@ -5,7 +5,7 @@ import Experience from "../components/Experience";
 export default function ExperiencePage() {
   return (
     <Layout title="Experience — Sameer Malik">
-      <Experience as="h1" index={null} />
+      <Experience as="h1" />
     </Layout>
   );
 }

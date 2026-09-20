@@ -6,8 +6,8 @@ import Skills from "../components/Skills";
 export default function About() {
   return (
     <Layout title="About — Sameer Malik">
-      <AboutMe as="h1" index={null} />
-      <Skills as="h2" index={null} />
+      <AboutMe as="h1" />
+      <Skills as="h2" />
     </Layout>
   );
 }

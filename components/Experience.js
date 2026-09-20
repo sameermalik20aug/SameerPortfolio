@@ -2,10 +2,10 @@ import React from "react";
 import Section from "./Section";
 import userData from "@constants/data";
 
-export default function Experience({ as = "h2", index = "02" }) {
+export default function Experience({ as = "h2" }) {
   const RoleHeading = as === "h1" ? "h2" : "h3";
   return (
-    <Section id="experience" title="Experience" as={as} index={index}>
+    <Section id="experience" title="Experience" as={as}>
       <div className="divide-y divide-line border-t border-line">
         {userData.experience.map((job) => (
           <article
