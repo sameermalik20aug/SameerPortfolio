@@ -1,11 +1,11 @@
 import React from "react";
-import ContainerBlock from "../components/ContainerBlock";
+import Layout from "../components/Layout";
 import Contact from "../components/Contact";
 
-export default function contact() {
+export default function ContactPage() {
   return (
-    <ContainerBlock>
-      <Contact />
-    </ContainerBlock>
+    <Layout title="Contact — Sameer Malik">
+      <Contact as="h1" />
+    </Layout>
   );
 }

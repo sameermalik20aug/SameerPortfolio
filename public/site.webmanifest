@@ -1,0 +1,13 @@
+{
+  "name": "Sameer Malik — Cloud & AI Applications Engineer",
+  "short_name": "Sameer Malik",
+  "description": "Sameer Malik — Cloud & AI Applications Engineer in Sydney.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#faf9f6",
+  "theme_color": "#faf9f6",
+  "icons": [
+    { "src": "/favicon.svg", "type": "image/svg+xml", "sizes": "any" },
+    { "src": "/apple-touch-icon.png", "type": "image/png", "sizes": "512x512" }
+  ]
+}

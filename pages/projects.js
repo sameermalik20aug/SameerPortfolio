@@ -1,11 +1,11 @@
 import React from "react";
-import ContainerBlock from "../components/ContainerBlock";
-import Projects from "../components/Projects";
+import Layout from "../components/Layout";
+import SelectedWork from "../components/SelectedWork";
 
-export default function projects() {
+export default function Projects() {
   return (
-    <ContainerBlock title="Projects - Sameer Malik">
-      <Projects />
-    </ContainerBlock>
+    <Layout title="Selected Work — Sameer Malik">
+      <SelectedWork as="h1" index={null} />
+    </Layout>
   );
 }

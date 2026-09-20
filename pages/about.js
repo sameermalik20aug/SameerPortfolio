@@ -1,11 +1,13 @@
 import React from "react";
-import ContainerBlock from "../components/ContainerBlock";
+import Layout from "../components/Layout";
 import AboutMe from "../components/AboutMe";
+import Skills from "../components/Skills";
 
-export default function about() {
+export default function About() {
   return (
-    <ContainerBlock>
-      <AboutMe />
-    </ContainerBlock>
+    <Layout title="About — Sameer Malik">
+      <AboutMe as="h1" index={null} />
+      <Skills as="h2" index={null} />
+    </Layout>
   );
 }

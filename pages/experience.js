@@ -1,11 +1,11 @@
 import React from "react";
-import ContainerBlock from "../components/ContainerBlock";
+import Layout from "../components/Layout";
 import Experience from "../components/Experience";
 
-export default function experience() {
+export default function ExperiencePage() {
   return (
-    <ContainerBlock title="Experience - Sameer Malik">
-      <Experience />
-    </ContainerBlock>
+    <Layout title="Experience — Sameer Malik">
+      <Experience as="h1" index={null} />
+    </Layout>
   );
 }

@@ -1,158 +1,128 @@
 const userData = {
-  githubUsername: "sameermalik20aug",
   name: "Sameer Malik",
   designation: "Cloud & AI Applications Engineer",
-  avatarUrl: "/avatar.png",
   email: "sameermalik20aug@gmail.com",
-  phone: "+61 478740288",
-  address: "Sydney, New South Wales, Australia.",
-  projects: [
+  location: "Sydney, Australia",
+  // Production origin — used for canonical + Open Graph URLs. Update if you
+  // move to a custom domain.
+  siteUrl: "https://samy-portfolio.vercel.app",
+
+  work: [
     {
-      title: "Tailwind Master Kit",
-      link: "https://tailwindmasterkit.com",
-      imgUrl: "/tmk.jpg",
+      title: "Bastion",
+      blurb:
+        "A dependency vulnerability scanner: it parses a package.json or requirements.txt, checks every dependency against OSV.dev, and returns deterministic, reviewable fix suggestions, with an optional Claude-powered plain-English explanation of each finding.",
+      tech: "Python, FastAPI, React, TypeScript, OSV.dev",
+      link: { href: "https://bastion-scan.vercel.app", label: "bastion-scan.vercel.app" },
+      visual: {
+        type: "screenshot",
+        src: "/work/bastion.svg",
+        width: 1000,
+        height: 520,
+        alt: "Bastion dependency scan flagging axios and lodash as critical and high, with suggested version bumps and deterministic fixes.",
+      },
     },
     {
-      title: "PlaceholderTech",
-      link: "https://placeholdertech.in",
-      imgUrl: "/placeholdertech.png",
+      title: "Incident Management System",
+      blurb:
+        "An incident logging dashboard that tracks software issues and uses AI to categorise incident types automatically and surface trend reports, backed by a serverless AWS pipeline.",
+      tech: "Python, React, AWS Lambda, SQS, AWS CDK",
+      visual: {
+        type: "diagram",
+        light: "/work/incident-light.svg",
+        dark: "/work/incident-dark.svg",
+        width: 1320,
+        height: 200,
+        alt: "Architecture: a React dashboard feeds a Lambda ingest API and an SQS queue into an AI classifier that generates trend reports.",
+      },
     },
     {
-      title: "Portfolio",
-      link: "https://manuarora.in",
-      imgUrl: "/portfolio.png",
-    },
-    {
-      title: "CovidRescue",
-      link: "https://covidrescue.co.in",
-      imgUrl: "/covidrescue.png",
-    },
-    {
-      title: "Algochurn",
-      link: "https://algochurn.com",
-      imgUrl: "/algochurn.png",
-    },
-    {
-      title: "Playground",
-      link: "https://play.placeholdertech.in",
-      imgUrl: "/playground.png",
-    },
-    {
-      title: "Feedmeback",
-      link: "https://feedmeback.vercel.app",
-      imgUrl: "/feedmeback.png",
-    },
-    {
-      title: "Devmedium",
-      link: "https://devmedium.vercel.app",
-      imgUrl: "/devmedium.png",
+      title: "Data Insights Pipeline",
+      blurb:
+        "An ETL pipeline that extracts banking data from multiple sources, transforms it in Python, and loads it into AWS RDS, then applies OpenAI and RAG to unstructured feedback to extract structured insights.",
+      tech: "Python, SQL, AWS RDS, CloudFormation, OpenAI API, RAG",
+      visual: {
+        type: "diagram",
+        light: "/work/data-insights-light.svg",
+        dark: "/work/data-insights-dark.svg",
+        width: 1320,
+        height: 200,
+        alt: "Architecture: data sources flow through a Python ETL into AWS RDS, with a RAG and OpenAI stage producing structured insights.",
+      },
     },
   ],
-  about: {
-    title:
-      "I'm a software developer that loves building products and web applications that impact millions of lives",
-    description: [
-      `I've been developing full-stack application since I was 10 years old. I didn't know what full-stack meant at that time because the term was not coined back then. I'm so out of content right now that I'm literally crying writing this text since lorem text is so 2012 now.`,
-      `After learning HTML and struggling with CSS, I came up with a brilliant idea of using bootstrap so that I don't have to style everything by myself and - for obvious reasons - if you knew bootstrap, you were cool.`,
-      `But now, I'm a legend. I've been coding in React, Angular, Vue, Svelte, Node.js, Express, Fastify, MongoDB, MySQL, Bootstrap, Tailwind, C, C++, C#, Rust, Haskell, Perl, PHP, Assembly, Logo and YouDontKnowShit programming language etc to name a few. Although I barely know the syntax (Psst, Stack overflow!), I consider myself a Ninja developer I'm laughing right now.`,
-    ],
-    currentProject: "Tailwind Master Kit",
-    currentProjectUrl: "https://tailwindmasterkit.com",
-  },
+
   experience: [
     {
-      title: "Software Developer",
-      company: "InSite Monitoring (InSite Project Solutions Pty Ltd)",
-      year: "2025",
+      role: "Full Stack Developer",
+      company: "University of New South Wales",
+      companyLink: "https://www.unsw.edu.au/",
+      dates: "Oct 2025 — Present",
+      bullets: [
+        "Led the technical design and full-stack migration of ECOS2, UNSW's enterprise course-outline system, from a legacy Laravel app to a Symfony and React architecture on AWS ECS, improving page-load speeds by 40%.",
+        "Maintained the Portfolio Entry admissions platform, handling sensitive student PII with Datadog monitoring, and modernised its auth by migrating from OAuth 2.0 to the Microsoft Graph API for UNSW Business School.",
+        "Built full-stack features for BAMS (Node.js, React, TypeScript) to automate contract-processing workflows and access controls, and maintained AWS CodePipeline CI/CD across all three platforms.",
+      ],
+    },
+    {
+      role: "Software Developer",
+      company: "InSite Monitoring",
       companyLink: "https://insiteprojectsolutions.com/",
-      desc: "Contributed to our flagship product - Panna - which is an AI powered candidate interviewing product.",
+      dates: "Feb 2025 — Jun 2025",
+      bullets: [
+        "Designed and prototyped a document ingestion and management platform (FastAPI, React, PostgreSQL) with secure uploads, role-based access control, version history and structured retrieval, reducing retrieval time by 30%.",
+        "Containerised the application with Docker and orchestrated CI/CD via AWS CodePipeline for consistent, reliable multi-environment deployments.",
+        "Engineered a real-time SendGrid notification system alerting supervisors to critical document actions (35% less oversight delay), backed by comprehensive unit, integration and API tests.",
+      ],
     },
     {
-      title: "Research Assistant",
+      role: "Research Assistant",
       company: "University of Sydney",
-      year: "2025",
       companyLink: "https://www.sydney.edu.au/",
-      desc: "Developed a marketplace for tailwind web components (React, HTML and Angular) and templates.",
+      dates: "Dec 2024 — Mar 2025",
+      bullets: [
+        "Developed automated scripts to streamline database workflows, integrating REST APIs for scalable, reliable data processing.",
+        "Designed automated test-data generation for high-quality, repeatable performance testing aligned with Agile practices.",
+        "Optimised database query performance by 25% through automated tuning, and documented the process for stakeholder clarity.",
+      ],
     },
     {
-      title: "Data Analyst",
-      company: "TripleSdata",
-      year: "2024",
-      companyLink: "https://triplesdata.com/",
-      desc: "Your last moment revision friend right before a Tech coding interview. Practice problems and get hired at top Product based companies.",
-    },
-    {
-      title: "Systems Engineer",
+      role: "Software Engineer",
       company: "Tata Consultancy Services",
-      year: "2023",
       companyLink: "https://www.tcs.com/",
-      desc: "Developed pothole detection system with OpenCV and computer vision, detects potholes on roads and informs the driver.",
-    },
-    {
-      title: "Post Graduation",
-      company: "University of Sydney.",
-      year: "2025",
-      companyLink: "https://www.sydney.edu.au/",
-      desc: "Major in Computer Science and Engineering with a CGPA of 7.6. Nobody asks this but it's okay.",
-    },
-    {
-      title: "Graduation",
-      company: "Amity University, Noida.",
-      year: "2020",
-      companyLink: "https://www.amity.edu/",
-      desc: "Major in Computer Science and Engineering with a CGPA of 7.6. Nobody asks this but it's okay.",
-    },
-    {
-      title: "High School",
-      company: "St. Joseph's Convent School.",
-      year: "2016",
-      companyLink: "https://stjosephsconventschoolfbd.com/",
-      desc: "Subjects being PCM - I barely survived with 80% marks aggregate. Flex fridays, fellas.",
+      dates: "Oct 2020 — Jul 2023",
+      bullets: [
+        "Built and maintained a customer-facing retail onboarding portal (Node.js, Angular, MongoDB, AWS) spanning submission through Experian credit-bureau verification for 5M+ banking customers.",
+        "Developed backend services and microservices with secure, OpenAPI-documented REST APIs, integrating AWS CloudWatch monitoring, Jenkins CI/CD and SonarQube quality gates.",
+        "Led delivery of an automated credit-card generation platform (25% faster issuance) and mentored junior developers through monthly Agile production deployments.",
+      ],
     },
   ],
-  resumeUrl:
-    "https://drive.google.com/file/d/1xmE3BOmgM7TAOOgVp36xQIQvYDntDYoo/view?usp=sharing",
+
+  skills: [
+    {
+      category: "Languages & Frameworks",
+      items: "Python, TypeScript, JavaScript, SQL, React, Angular, Django REST framework, Node.js",
+    },
+    {
+      category: "Databases & Cloud",
+      items: "PostgreSQL, MongoDB, AWS (S3, DynamoDB, Lambda, ECS, CloudWatch), Docker, GCP (Foundations)",
+    },
+    {
+      category: "Developer Tools",
+      items: "REST APIs, Git, GitHub, AWS CDK, CodePipeline, Jenkins, Jest, OAuth, JSON, YAML, Jira, Claude",
+    },
+    {
+      category: "Key Competencies",
+      items: "Microservice architecture, Infrastructure as Code, OWASP Top 10, Agile collaboration",
+    },
+  ],
+
   socialLinks: {
-    instagram: "https://www.instagram.com/srox69/",
-    twitter: "https://x.com/SamyM98",
-    linkedin: "https://www.linkedin.com/in/sameer-malik-20aug/",
     github: "https://github.com/sameermalik20aug",
+    linkedin: "https://www.linkedin.com/in/sameer-malik-20aug/",
+    twitter: "https://x.com/SamyM98",
   },
-  // Repositories shown in the "Latest Code" section. Kept as a static list so
-  // the site has no runtime dependency on the GitHub API (which rate-limits).
-  // Edit this list to control what appears.
-  repos: [
-    {
-      name: "vid-sum",
-      description: "Video summarization application.",
-      html_url: "https://github.com/sameermalik20aug/vid-sum",
-    },
-    {
-      name: "bastion-scan",
-      description: "Host and configuration scanning tool.",
-      html_url: "https://github.com/sameermalik20aug/bastion-scan",
-    },
-    {
-      name: "One-Shot-TS",
-      description: "A one-shot tour through the basics of TypeScript.",
-      html_url: "https://github.com/sameermalik20aug/One-Shot-TS",
-    },
-    {
-      name: "Angular-Tut-Final-Project",
-      description: "Final project built while working through an Angular course.",
-      html_url: "https://github.com/sameermalik20aug/Angular-Tut-Final-Project",
-    },
-    {
-      name: "PokedexS",
-      description: "A Pokédex web app.",
-      html_url: "https://github.com/sameermalik20aug/PokedexS",
-    },
-    {
-      name: "ResonateContacts",
-      description: "Contact management experiment.",
-      html_url: "https://github.com/sameermalik20aug/ResonateContacts",
-    },
-  ],
 };
 
 export default userData;

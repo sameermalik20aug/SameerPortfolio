@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 520" role="img" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
+  <rect x="0" y="0" width="1000" height="520" fill="#FBFAF7"/>
+  <rect x="0" y="0" width="1000" height="48" fill="#F1EEE6"/>
+  <circle cx="28" cy="24" r="6" fill="#D8D2C4"/>
+  <circle cx="50" cy="24" r="6" fill="#D8D2C4"/>
+  <circle cx="72" cy="24" r="6" fill="#D8D2C4"/>
+  <text x="500" y="29" fill="#6B6458" font-size="13" text-anchor="middle">bastion-scan — package.json · OSV.dev</text>
+
+  <g>
+    <rect x="40" y="86"  width="12" height="12" rx="2" fill="#9B2D33"/>
+    <rect x="40" y="138" width="12" height="12" rx="2" fill="#9B2D33"/>
+    <rect x="40" y="190" width="12" height="12" rx="2" fill="#6B6458"/>
+    <rect x="40" y="242" width="12" height="12" rx="2" fill="#4B7A3F"/>
+    <rect x="40" y="294" width="12" height="12" rx="2" fill="#4B7A3F"/>
+  </g>
+
+  <g fill="#1C1A17" font-size="16">
+    <text x="68" y="97">axios</text>
+    <text x="68" y="149">lodash</text>
+    <text x="68" y="201">minimist</text>
+    <text x="68" y="253">react</text>
+    <text x="68" y="305">fastapi</text>
+  </g>
+  <g fill="#6B6458" font-size="16">
+    <text x="300" y="97">0.21.1 → 0.28.0</text>
+    <text x="300" y="149">4.17.19 → 4.17.21</text>
+    <text x="300" y="201">1.2.5 → 1.2.6</text>
+    <text x="300" y="253">18.2.0</text>
+    <text x="300" y="305">0.110.0</text>
+  </g>
+  <g font-size="16" font-weight="600" text-anchor="end">
+    <text x="960" y="97"  fill="#9B2D33">CRITICAL</text>
+    <text x="960" y="149" fill="#9B2D33">HIGH</text>
+    <text x="960" y="201" fill="#6B6458">MODERATE</text>
+    <text x="960" y="253" fill="#4B7A3F">OK</text>
+    <text x="960" y="305" fill="#4B7A3F">OK</text>
+  </g>
+
+  <line x1="40" y1="344" x2="960" y2="344" stroke="#E4DFD4" stroke-width="1"/>
+  <text x="40" y="386" fill="#6B6458" font-size="15">3 advisories</text>
+  <text x="960" y="386" fill="#1C1A17" font-size="15" text-anchor="end" font-weight="600">3 deterministic fixes · diffs ready</text>
+
+  <text x="40" y="440" fill="#9B2D33" font-size="15">Claude  patch axios first — actively exploited</text>
+</svg>

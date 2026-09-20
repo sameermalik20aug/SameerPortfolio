@@ -1,17 +1,18 @@
-import ContainerBlock from "../components/ContainerBlock";
-import FavouriteProjects from "../components/FavouriteProjects";
-import LatestCode from "../components/LatestCode";
+import Layout from "../components/Layout";
 import Hero from "../components/Hero";
+import SelectedWork from "../components/SelectedWork";
+import Experience from "../components/Experience";
+import Skills from "../components/Skills";
+import AboutMe from "../components/AboutMe";
 
 export default function Home() {
   return (
-    <ContainerBlock
-      title="Sameer Malik - Developer, Writer, Creator"
-      description="This is it"
-    >
+    <Layout>
       <Hero />
-      <FavouriteProjects />
-      <LatestCode />
-    </ContainerBlock>
+      <SelectedWork />
+      <Experience />
+      <Skills />
+      <AboutMe />
+    </Layout>
   );
 }

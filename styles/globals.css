@@ -2,20 +2,92 @@
 @tailwind components;
 @tailwind utilities;
 
-@import 'fonts.css';
+:root {
+  color-scheme: light;
+
+  --paper: #faf9f6;
+  --surface: #f1eee6;
+  --ink: #1c1a17;
+  --muted: #6b6458;
+  --line: #e4dfd4;
+  --rule: #d8d2c4;
+
+  --accent: #9b2d33;
+  --accent-strong: #8f2a30;
+  --on-accent: #fdfbf7;
+
+  --space-section: clamp(6rem, 12vw, 10rem);
+  --space-section-sm: clamp(4rem, 8vw, 6rem);
+  --space-block: 2.5rem;
+  --space-stack: 1.25rem;
+  --space-gutter: 1.5rem;
+
+  --container: 68rem;
+  --measure: 68ch;
+}
+
+.dark {
+  color-scheme: dark;
+
+  --paper: #171614;
+  --surface: #201e1a;
+  --ink: #ede9e1;
+  --muted: #a39b8d;
+  --line: #302d27;
+  --rule: #3a362e;
+
+  --accent: #e0797f;
+  --accent-strong: #e88c91;
+  --on-accent: #171614;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
 
 html,
 body {
-  padding: 0;
   margin: 0;
-  font-family: 'Inter var', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
-    Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  padding: 0;
+  background-color: var(--paper);
+  color: var(--ink);
 }
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
 a {
   color: inherit;
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
+::selection {
+  background: var(--accent);
+  color: var(--on-accent);
+}
+
+:where(a, button, input, textarea, select, summary, [tabindex]):focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

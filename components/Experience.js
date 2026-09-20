@@ -1,53 +1,44 @@
-import userData from "@constants/data";
 import React from "react";
+import Section from "./Section";
+import userData from "@constants/data";
 
-export default function Experience() {
+export default function Experience({ as = "h2", index = "02" }) {
+  const RoleHeading = as === "h1" ? "h2" : "h3";
   return (
-    <section className="bg-white dark:bg-gray-800">
-      <div className="max-w-6xl mx-auto h-48 bg-white dark:bg-gray-800">
-        <h1 className=" text-5xl md:text-9xl font-bold py-20 text-center md:text-left">
-          Experience
-        </h1>
+    <Section id="experience" title="Experience" as={as} index={index}>
+      <div className="divide-y divide-line border-t border-line">
+        {userData.experience.map((job) => (
+          <article
+            key={`${job.role}-${job.company}`}
+            className="grid gap-2 py-block md:grid-cols-[11rem_1fr] md:gap-10"
+          >
+            <p className="font-mono text-meta text-muted md:pt-1">{job.dates}</p>
+            <div>
+              <RoleHeading className="font-display text-title font-semibold text-ink">
+                {job.role}
+              </RoleHeading>
+              <a
+                href={job.companyLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-note text-muted underline decoration-transparent underline-offset-4 transition-colors hover:text-accent-strong hover:decoration-accent-strong"
+              >
+                {job.company}
+              </a>
+              <ul className="mt-4 space-y-2">
+                {job.bullets.map((b, i) => (
+                  <li key={i} className="flex gap-3 text-prose text-muted">
+                    <span aria-hidden="true" className="text-accent-strong">
+                      —
+                    </span>
+                    <span>{b}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </article>
+        ))}
       </div>
-      <div className="bg-[#F1F1F1] dark:bg-gray-900 -mt-4">
-        <div className="grid grid-cols-1 dark:bg-gray-900 max-w-xl mx-auto pt-20">
-          {/* Experience card */}
-          {userData.experience.map((exp, idx) => (
-            <React.Fragment key={idx}>
-              <ExperienceCard
-                title={exp.title}
-                desc={exp.desc}
-                year={exp.year}
-                company={exp.company}
-                companyLink={exp.companyLink}
-              />
-              {idx === userData.experience.length - 1 ? null : (
-                <div className="divider-container flex flex-col items-center -mt-2">
-                  <div className="w-4 h-4 bg-green-500 rounded-full relative z-10">
-                    <div className="w-4 h-4 bg-green-500 rounded-full relative z-10 animate-ping"></div>
-                  </div>
-                  <div className="w-1 h-24 bg-gray-200 dark:bg-gray-500 rounded-full -mt-2"></div>
-                </div>
-              )}
-            </React.Fragment>
-          ))}
-        </div>
-      </div>
-    </section>
+    </Section>
   );
 }
-
-const ExperienceCard = ({ title, desc, year, company, companyLink }) => {
-  return (
-    <div className="relative experience-card border p-4 rounded-md shadow-xl bg-white dark:bg-gray-800 z-10 mx-4">
-      <h1 className="absolute -top-10 md:-left-10 md:-top-10 text-4xl text-gray-200 font-bold dark:text-gray-800">
-        {year}
-      </h1>
-      <h1 className="font-semibold text-xl">{title}</h1>
-      <a href={companyLink} className="text-gray-500">
-        {company}
-      </a>
-      <p className="text-gray-600 dark:text-gray-400 my-2">{desc}</p>
-    </div>
-  );
-};

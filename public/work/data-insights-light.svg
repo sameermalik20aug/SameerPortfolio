@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1320 200" fill="none" role="img" font-family="ui-sans-serif, system-ui, -apple-system, sans-serif">
+  <defs>
+    <marker id="di-l" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#6B6458"/>
+    </marker>
+  </defs>
+
+  <g stroke="#1C1A17" stroke-width="1.5">
+    <rect x="40"   y="60" width="200" height="80" rx="6"/>
+    <rect x="320"  y="60" width="200" height="80" rx="6"/>
+    <rect x="600"  y="60" width="200" height="80" rx="6"/>
+    <rect x="1160" y="60" width="200" height="80" rx="6"/>
+  </g>
+  <rect x="880" y="60" width="200" height="80" rx="6" stroke="#9B2D33" stroke-width="1.5"/>
+
+  <g fill="#1C1A17" font-size="16" font-weight="600" text-anchor="middle">
+    <text x="140"  y="96">Sources</text>
+    <text x="420"  y="96">ETL</text>
+    <text x="700"  y="96">AWS RDS</text>
+    <text x="1260" y="96">Insights</text>
+  </g>
+  <text x="980" y="96" fill="#9B2D33" font-size="16" font-weight="600" text-anchor="middle">RAG</text>
+
+  <g fill="#6B6458" font-size="12" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, monospace">
+    <text x="140"  y="118">data feeds</text>
+    <text x="420"  y="118">Python</text>
+    <text x="700"  y="118">analytics</text>
+    <text x="1260" y="118">structured</text>
+    <text x="980"  y="118" fill="#9B2D33">OpenAI</text>
+  </g>
+
+  <g stroke="#6B6458" stroke-width="1.5">
+    <line x1="240"  y1="100" x2="314"  y2="100" marker-end="url(#di-l)"/>
+    <line x1="520"  y1="100" x2="594"  y2="100" marker-end="url(#di-l)"/>
+    <line x1="800"  y1="100" x2="874"  y2="100" marker-end="url(#di-l)"/>
+    <line x1="1080" y1="100" x2="1154" y2="100" marker-end="url(#di-l)"/>
+  </g>
+</svg>
